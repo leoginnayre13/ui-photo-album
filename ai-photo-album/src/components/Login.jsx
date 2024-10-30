@@ -11,7 +11,7 @@ const Login = () => {
                  style={{backgroundImage: `url(${bg})`}}>
                 {/*<div className="absolute inset-0 bg-black bg-opacity-30"></div>*/}
 
-                {/*// Login form modal*/}
+                {/* Login form modal*/}
                 <div>
                     <div className="z-10 w-full max-w-md p-8 bg-white bg-opacity-95 rounded-lg shadow-md">
                         <Typography variant="h5" className="text-center pb-4 text-red-800">
