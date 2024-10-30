@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28c67aee-e817-424a-bb1b-89d188323247" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Register.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-photo-album/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "login-page",
+    "git-widget-placeholder": "register-form",
     "last_opened_file_path": "/Users/majo/ui-photo-album",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

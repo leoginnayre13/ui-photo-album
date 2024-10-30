@@ -1,10 +1,8 @@
 import React from "react";
 import {Button, TextField, Typography, Box } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import bg from '../assets/mainbg.png'
 
 const ForgotPassword = () => {
-    const navigate = useNavigate();
   return (
       <div className="min-h-screen flex flex-col">
         <div
