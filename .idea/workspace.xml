@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28c67aee-e817-424a-bb1b-89d188323247" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Register.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Dashboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Images.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-photo-album/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +53,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "register-form",
     "last_opened_file_path": "/Users/majo/ui-photo-album",
     "node.js.detected.package.eslint": "true",
@@ -87,6 +95,7 @@
       <updated>1730283788049</updated>
       <workItem from="1730283789173" duration="1212000" />
       <workItem from="1730285057586" duration="1517000" />
+      <workItem from="1730402724852" duration="10793000" />
     </task>
     <servers />
   </component>

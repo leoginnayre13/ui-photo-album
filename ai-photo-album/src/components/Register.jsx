@@ -2,18 +2,20 @@ import React from 'react';
 import bg from '../assets/mainbg.png'
 import {Button, TextField, Typography, Box} from "@mui/material";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Register = () => {
 
     return (
         <div className="min-h-screen flex flex-col">
+            <Header/>
             <div
                 className="flex-grow bg-cover bg-center relative flex items-center justify-center flex-col"
                 style={{ backgroundImage: `url(${bg})` }}
                 >
                 {/*Registration form*/}
                 <div className="z-10 w-full max-w-md p-8 bg-white rounded-lg shadow-md">
-                    <Typography variants="h5" className="text-center pb-4 text-red-800">
+                    <Typography variant="h5" className="text-center pb-4 text-custom-maroon">
                         Register
                     </Typography>
                     <Box component="form" NoValidate="off">
@@ -54,7 +56,7 @@ const Register = () => {
                             type="submit"
                             variant="contained"
                             sx={{
-                                backgroundColor: '#991b1b', // Tailwind's bg-red-800 equivalent
+                                backgroundColor: '#872434', // Tailwind's bg-red-800 equivalent
                                 '&:hover': {
                                     backgroundColor: '#7f1d1d', // Tailwind's hover:bg-red-900 equivalent
                                 },
@@ -69,7 +71,7 @@ const Register = () => {
                     {/*Login Link*/}
                     <div className="flex justify-center text-sm mt-4">
                         <span className="text-gray-600">Already have an account?&nbsp;</span>
-                        <Link to ="/" className="text-red-800 hover:underline">Sign In</Link>
+                        <Link to ="/" className="text-custom-maroon hover:underline">Sign In</Link>
                     </div>
                 </div>
             </div>
