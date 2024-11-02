@@ -84,7 +84,8 @@ const Dashboard = () => {
                                 <Box key={rowIndex} className="flex justify-around mb-2 pt-2">
                                     {row.map((face, index) => (
                                         <div key={index} className="flex flex-col items-center">
-                                            <Avatar className="bg-red-800">{face[0]}</Avatar>
+                                            <Avatar className="bg-red-800" sx={{ width: { xs: 50, md: 70, lg: 90 }, height: { xs: 50, md: 70, lg: 90 } }}>
+                                                {face[0]}</Avatar>
                                             <Typography variant="caption">{face}</Typography>
                                         </div>
                                     ))}
@@ -107,33 +108,21 @@ const Dashboard = () => {
                                 },
                                 color: '#fff',
                             }}>Upload Photos</Button>
-                            <div>
+                        {["Batch Folder", "Folder", "Photo"].map((text, index) => (
+                            <Box key={index} mb={1}>
                                 <Button
-                                className="p-1 underline text-custom-maroon hover:cursor-pointer hover:underline"
-                                style={{padding:10, minWidth:'auto', background:'none', textTransform:'none',
-                                    boxShadow:'none', fontSize: '1.25rem'}}
-                                >
-                                    Batch Folder
+                                    className="p1 underline text-custom-maroon hover:cursor-pointer hover:underline"
+                                    style={{
+                                        padding: 10,
+                                        minWidth: 'auto',
+                                        background: 'none',
+                                        textTransform: 'none',
+                                        boxShadow: 'none',
+                                        fontSize: '1.25rem'
+                                    }}>{text}
                                 </Button>
-                                </div>
-                            <div>
-                                <Button
-                                className="p-1 underline text-custom-maroon hover:cursor-pointer hover:underline"
-                                style={{padding:10, minWidth:'auto', background:'none', textTransform:'none',
-                                    boxShadow:'none', fontSize: '1.25rem'}}
-                                >
-                                    Folder
-                                </Button>
-                            </div>
-                            <div>
-                                <Button
-                                className="p-1 underline text-custom-maroon hover:cursor-pointer hover:underline"
-                                style={{padding:10, minWidth:'auto', background:'none', textTransform:'none',
-                                    boxShadow:'none', fontSize: '1.25rem'}}
-                                >
-                                    Photo
-                                </Button>
-                            </div>
+                            </Box>
+                        ))}
                     </CardContent>
                 </Card>
             </div>
