@@ -1,54 +1,51 @@
 import React from 'react';
-import {Avatar, Box, Button, Card, CardContent, Typography} from "@mui/material";
+import { Avatar, Box, Button, Card, CardContent, Typography } from "@mui/material";
 import Images from "./Images";
 import HeaderMenu from "./HeaderMenu";
 
 const Dashboard = () => {
-
     const albums = ["Christmas Party 2023", "Summer Outing 2024", "Outreach 2024", "At the Room 202", "Dinner at 7/11"];
     const tags = ["Investiture", "Outreach program", "Etesep defense", "Graduation 2022"];
-    const faces = ["Leogin", "Majo", "Mykel","John", "Patrick","Alfred"];
+    const faces = ["Leogin", "Majo", "Mykel", "John", "Patrick", "Alfred"];
 
-    // split faces into 3 columns
     const splitToColumn = (arr, chunkSize) => {
-      const result = [];
-      for (let i = 0; i < arr.length; i += chunkSize) {
-          result.push(arr.slice(i, i + chunkSize));
-      }
-      return result;
+        const result = [];
+        for (let i = 0; i < arr.length; i += chunkSize) {
+            result.push(arr.slice(i, i + chunkSize));
+        }
+        return result;
     }
 
     const faceRows = splitToColumn(faces, 3);
 
     return (
-        <div className="min-h-screen bg white">
-            <HeaderMenu/>
-            <Images/>
-            <div className="p4 grid grid-cols-1 lg:grid-cols-4 gap-12 w-[75%] max-w-full" style={{margin:'0px auto'}}>
-                {/*albums*/}
+        <div className="min-h-screen bg-white">
+            <HeaderMenu />
+            <Images />
+            <div className="p-4 grid grid-cols-1 lg:grid-cols-4 gap-12 w-[75%]  max-w-full"
+                 style={{margin: '0px auto'}}>
+                {/* Albums */}
                 <Card className="bg-white shadow-lg !rounded-lg">
                     <CardContent>
-                        {/*<Typography variant="h6" className="p-1 text-center bg-custom-maroon text-white shadow-lg rounded-lg">Album</Typography>*/}
                         <Button
-                        fullWidth
-                        type="submit"
-                        variant="contained"
-                        sx={{
-                            backgroundColor: '#872434',
-                            '&:hover': {
-                                backgroundColor: '#7f1d1d',
-                            },
-                            color: '#fff',
-                        }}>Albums</Button>
+                            fullWidth
+                            type="submit"
+                            variant="contained"
+                            sx={{
+                                backgroundColor: '#872434',
+                                '&:hover': {
+                                    backgroundColor: '#7f1d1d',
+                                },
+                                color: '#fff',
+                            }}>Albums</Button>
                         {albums.map((album, index) => (
                             <Typography key={index} variant="body2" className="p-1">{album}</Typography>
                         ))}
                     </CardContent>
                 </Card>
-                {/*tags*/}
+                {/* Tags */}
                 <Card className="bg-white shadow-lg !rounded-lg">
                     <CardContent>
-                        {/*<Typography variant="h6" className="p-1 text-center bg-custom-maroon text-white shadow-lg rounded-lg">Tags</Typography>*/}
                         <Button
                             fullWidth
                             type="submit"
@@ -60,15 +57,14 @@ const Dashboard = () => {
                                 },
                                 color: '#fff',
                             }}>Tags</Button>
-                        {tags.map((tag,index) => (
+                        {tags.map((tag, index) => (
                             <Typography key={index} variant="body2" className="p-1">{tag}</Typography>
                         ))}
                     </CardContent>
                 </Card>
-                {/*faces*/}
+                {/* Faces */}
                 <Card className="bg-white shadow-lg !rounded-lg">
                     <CardContent>
-                        {/*<Typography variant="h6" className="p-1 text-center bg-custom-maroon text-white shadow-lg rounded-lg">Faces</Typography>*/}
                         <Button
                             fullWidth
                             type="submit"
@@ -80,23 +76,23 @@ const Dashboard = () => {
                                 },
                                 color: '#fff',
                             }}>Faces</Button>
-                            {faceRows.map((row,rowIndex) => (
-                                <Box key={rowIndex} className="flex justify-around mb-2 pt-2">
-                                    {row.map((face, index) => (
-                                        <div key={index} className="flex flex-col items-center">
-                                            <Avatar className="bg-red-800" sx={{ width: { xs: 50, md: 70, lg: 90 }, height: { xs: 50, md: 70, lg: 90 } }}>
-                                                {face[0]}</Avatar>
-                                            <Typography variant="caption">{face}</Typography>
-                                        </div>
-                                    ))}
-                                </Box>
-                            ))}
+                        {faceRows.map((row, rowIndex) => (
+                            <Box key={rowIndex} className="flex justify-around mb-2 pt-2">
+                                {row.map((face, index) => (
+                                    <div key={index} className="flex flex-col items-center">
+                                        <Avatar className="bg-red-800">
+                                            {face[0]}
+                                        </Avatar>
+                                        <Typography variant="caption">{face}</Typography>
+                                    </div>
+                                ))}
+                            </Box>
+                        ))}
                     </CardContent>
                 </Card>
-                {/*Upload single/bulk images*/}
+                {/* Upload Photos */}
                 <Card className="bg-white shadow-lg !rounded-lg">
                     <CardContent>
-                        {/*<Typography variant="h6" className="p-1 text-center mb-2 bg-custom-maroon text-white shadow-lg rounded-lg">Upload Photo</Typography>*/}
                         <Button
                             fullWidth
                             type="submit"

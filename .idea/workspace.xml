@@ -7,6 +7,7 @@
     <list default="true" id="28c67aee-e817-424a-bb1b-89d188323247" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
