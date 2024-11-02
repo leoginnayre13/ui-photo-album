@@ -1,6 +1,7 @@
 import React from 'react';
 import {Avatar, Box, Button, Card, CardContent, Typography} from "@mui/material";
 import Images from "./Images";
+import HeaderMenu from "./HeaderMenu";
 
 const Dashboard = () => {
 
@@ -21,6 +22,7 @@ const Dashboard = () => {
 
     return (
         <div className="min-h-screen bg white">
+            <HeaderMenu/>
             <Images/>
             <div className="p4 grid grid-cols-1 lg:grid-cols-4 gap-12 w-[75%] max-w-full" style={{margin:'0px auto'}}>
                 {/*albums*/}
