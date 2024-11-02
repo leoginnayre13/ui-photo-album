@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28c67aee-e817-424a-bb1b-89d188323247" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Dashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Images.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/FaceId.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-photo-album/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,24 +44,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "register-form",
-    "last_opened_file_path": "/Users/majo/ui-photo-album",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/majo/ui-photo-album/ai-photo-album/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;faceid&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/majo/ui-photo-album&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/majo/ui-photo-album/ai-photo-album/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -96,6 +89,7 @@
       <workItem from="1730283789173" duration="1212000" />
       <workItem from="1730285057586" duration="1517000" />
       <workItem from="1730402724852" duration="10793000" />
+      <workItem from="1730567458395" duration="3537000" />
     </task>
     <servers />
   </component>
