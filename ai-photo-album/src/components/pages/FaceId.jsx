@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Avatar, Box, InputAdornment,TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import HeaderMenu from "./HeaderMenu";
 
 function FaceId() {
 
@@ -26,6 +27,7 @@ function FaceId() {
 
     return (
         <div className="min-h-screen bg-white">
+            <HeaderMenu/>
             <div className='w-[75%] m-auto mt-8'>
                 <div className='text-center text-4xl font-bold text-custom-red'>Faces</div>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className="flex justify-end">
