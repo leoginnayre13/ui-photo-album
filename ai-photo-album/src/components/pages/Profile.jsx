@@ -119,7 +119,7 @@ function Profile() {
           <TextField
             id="input-with-icon-textfield"
             className="!rounded-lg px-4 bg-gray-100 !mb-2"
-            InputProps={{
+            slotProps={{
               input: {
                 startAdornment: (
                   <InputAdornment position="start">

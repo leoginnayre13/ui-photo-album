@@ -7,6 +7,7 @@ import FaceId from "./components/pages/FaceId";
 import Profile from "./components/pages/Profile";
 import Albums from "./components/pages/Albums";
 import TestPage from "./components/pages/TestPage";
+import Tags from "./components/pages/Tags";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/faces" element={<FaceId />} />
         <Route path="/albums" element={<Albums />} />
         <Route path="/test" element={<TestPage />} />
+        <Route path="/tags" element={<Tags />} />
       </Routes>
     </Router>
   );
