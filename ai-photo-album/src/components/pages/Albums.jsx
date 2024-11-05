@@ -19,6 +19,7 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { Delete, Edit } from "@mui/icons-material";
+import HeaderMenu from "./HeaderMenu";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,6 +53,7 @@ function Albums() {
 
   return (
     <div className="min-h-screen bg-white">
+      <HeaderMenu />
       <div className="w-[75%] m-auto mt-8">
         <div className="text-center text-4xl font-bold text-custom-maroon">
           ALBUMS
