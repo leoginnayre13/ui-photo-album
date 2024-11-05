@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28c67aee-e817-424a-bb1b-89d188323247" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/ForgotPassword.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/pages/FaceId.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/FaceId.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/pages/HeaderMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/HeaderMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Images.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ai-photo-album/src/components/pages/Images.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +57,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "profile",
     "last_opened_file_path": "/Users/majo/ui-photo-album",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -100,5 +108,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/ai-photo-album/src/components/pages/Profile.jsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
