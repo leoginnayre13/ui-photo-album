@@ -5,6 +5,8 @@ import Register from "./components/Register";
 import Dashboard from "./components/pages/Dashboard";
 import FaceId from "./components/pages/FaceId";
 import Profile from "./components/pages/Profile";
+import Albums from "./components/pages/Albums";
+import TestPage from "./components/pages/TestPage";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/faces" element={<FaceId />} />
+        <Route path="/albums" element={<Albums />} />
+        <Route path="/test" element={<TestPage />} />
       </Routes>
     </Router>
   );
