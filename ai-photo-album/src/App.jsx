@@ -6,8 +6,9 @@ import Dashboard from "./components/pages/Dashboard";
 import FaceId from "./components/pages/FaceId";
 import Profile from "./components/pages/Profile";
 import Albums from "./components/pages/Albums";
-import TestPage from "./components/pages/TestPage";
+import MyPhotos from "./components/pages/MyPhotos";
 import Tags from "./components/pages/Tags";
+import Upload from "./components/pages/Upload";
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/faces" element={<FaceId />} />
         <Route path="/albums" element={<Albums />} />
-        <Route path="/test" element={<TestPage />} />
+        <Route path="/myphotos" element={<MyPhotos />} />
         <Route path="/tags" element={<Tags />} />
+        <Route path="/upload" element={<Upload />} />
       </Routes>
     </Router>
   );

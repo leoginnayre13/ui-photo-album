@@ -1,5 +1,3 @@
-import React from "react";
-import bg from "../assets/mainbg.png";
 import { Button, TextField, Typography, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import Header from "./Header";
