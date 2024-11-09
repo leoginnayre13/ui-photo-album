@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import HeaderMenu from "./HeaderMenu.jsx";
 import {
   Box,
@@ -35,7 +35,7 @@ function a11yProps(index) {
 }
 
 function Profile() {
-  const [value, setValue] = React.useState(0);
+  const [value] = React.useState(0);
 
   const images = [
     {

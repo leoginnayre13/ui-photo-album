@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/ublogo.png";
 import { Avatar, Menu, MenuItem } from "@mui/material";
@@ -94,7 +94,7 @@ function HeaderMenu() {
               borderBottom: "1px solid #991b1b",
             },
           }}
-          onClick={() => handleClose("tags")}
+          onClick={() => handleClose("profile")}
         >
           {" "}
           Profile

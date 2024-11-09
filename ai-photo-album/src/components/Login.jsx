@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import Header from "./Header";
@@ -79,7 +78,7 @@ const Login = () => {
           <Typography variant="h3" className="text-center text-custom-maroon">
             University of Batangas
             <br />
-            Photo Album
+            Legacy
           </Typography>
         </div>
       </div>

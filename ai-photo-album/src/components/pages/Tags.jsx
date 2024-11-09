@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderMenu from "./HeaderMenu.jsx";
 import {
   Box,
@@ -101,7 +100,7 @@ const Tags = () => {
         labelRowsPerPage="Rows per page"
         className="mt-4 !w-[75%] m-auto"
         sx={{
-          "& .MuiPagitationItem-root": { color: "white" },
+          "& .MuiPaginationItem-root": { color: "white" },
         }}
       />
     </div>

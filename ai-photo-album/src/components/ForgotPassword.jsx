@@ -1,6 +1,4 @@
-import React from "react";
 import { Button, TextField, Typography, Box } from "@mui/material";
-import bg from "../assets/mainbg.png";
 import Header from "./Header";
 import Images from "./pages/Images.jsx";
 
