@@ -14,8 +14,22 @@ import {
   TextField,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { useState, useEffect } from "react";
+import API from "../../api/backend.js";
+import { Link } from "react-router-dom";
 
 const Tags = () => {
+  const [tags, setTags] = useState([]);
+
+  useEffect(() => {
+    fetchTags();
+  }, [])
+
+  const fetchTags = async () => {
+    const response = await API.call('folders/tags', "GET", null);
+    setTags(response.res)
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <HeaderMenu />
@@ -78,12 +92,16 @@ const Tags = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {[1, 2, 3].map((row, index) => (
+            {tags.map((row, index) => (
               <TableRow key={index}>
-                <TableCell>Sample Event</TableCell>
-                <TableCell>01/01/2024 12:00 PM</TableCell>
-                <TableCell>Marjory Del Rosario</TableCell>
-                <TableCell>100</TableCell>
+                <TableCell>
+                  <Link to="/myphotos" state={{ title: row.name, id: row.id }} >
+                    {row.name}
+                  </Link>
+                </TableCell>
+                <TableCell>{row.createdAt}</TableCell>
+                <TableCell>{row.createdBy}</TableCell>
+                <TableCell>{row.count}</TableCell>
               </TableRow>
             ))}
           </TableBody>

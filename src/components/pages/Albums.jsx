@@ -20,6 +20,9 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import { Delete, Edit } from "@mui/icons-material";
 import HeaderMenu from "./HeaderMenu";
+import { useEffect } from "react";
+import API from "../../api/backend";
+import { Link } from "react-router-dom";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,10 +49,19 @@ function a11yProps(index) {
 function Albums() {
   const [value, setValue] = useState(0);
   const [open, setOpen] = useState(false);
-
   const handleChange = (event, newValue) => setValue(newValue);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [albums, setAlbums] = useState([]);
+
+  useEffect(() => {
+    fetchAlbums();
+  }, [])
+
+  const fetchAlbums = async () => {
+    const response = await API.call('folders/albums', "GET", null);
+    setAlbums(response.res)
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -67,8 +79,8 @@ function Albums() {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="Grid View" {...a11yProps(0)} />
-            <Tab label="List View" {...a11yProps(1)} />
+            <Tab label="Grid View" {...a11yProps(1)} />
+            <Tab label="List View" {...a11yProps(0)} />
           </Tabs>
           <TextField
             id="input-with-icon-textfield"
@@ -138,34 +150,40 @@ function Albums() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
-                  <TableCell>Album 1</TableCell>
-                  <TableCell>2024</TableCell>
-                  <TableCell>User A</TableCell>
-                  <TableCell>10</TableCell>
-                  <TableCell className="flex justify-center">
-                    <IconButton>
-                      <Button
-                        className="!bg-green-800"
-                        variant="contained"
-                        size="small"
-                      >
-                        <Edit />
-                        Edit
-                      </Button>
-                    </IconButton>
-                    <IconButton>
-                      <Button
-                        className="!bg-red-600"
-                        variant="contained"
-                        size="small"
-                      >
-                        <Delete />
-                        DELETE
-                      </Button>
-                    </IconButton>
-                  </TableCell>
-                </TableRow>
+                {albums.map((row, index) => (
+                  <TableRow key={index}>
+                    <Link to="/myphotos" state={{ title: row.name, id: row.id }} >
+                      {row.name}
+                    </Link>
+                    <TableCell>{row.createdAt}</TableCell>
+                    <TableCell>{row.createdBy}</TableCell>
+                    <TableCell>{row.count}</TableCell>
+                    <TableCell className="flex justify-center">
+                      <IconButton>
+                        <Button
+                          className="!bg-green-800"
+                          variant="contained"
+                          size="small"
+                        >
+                          <Edit />
+                          Edit
+                        </Button>
+                      </IconButton>
+                      <IconButton>
+                        <Button
+                          className="!bg-red-600"
+                          variant="contained"
+                          size="small"
+                        >
+                          <Delete />
+                          DELETE
+                        </Button>
+                      </IconButton>
+                    </TableCell>
+                  </TableRow>
+
+
+                ))}
               </TableBody>
             </Table>
           </TableContainer>
@@ -174,8 +192,8 @@ function Albums() {
             count={10}
             page={0}
             rowsPerPage={5}
-            onPageChange={() => {}}
-            onRowsPerPageChange={() => {}}
+            onPageChange={() => { }}
+            onRowsPerPageChange={() => { }}
             labelRowsPerPage="Rows per page"
             rowsPerPageOptions={[5, 10, 25]}
             className="mt-4"

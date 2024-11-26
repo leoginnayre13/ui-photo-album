@@ -8,19 +8,12 @@ const API = {
     if (accessToken) {
       headerOptions.Authorization = "Bearer " + accessToken;
     }
-    console.log("accessToken : ", accessToken)
-    const requestOptions = {
-      method: method,
-      headers: headerOptions,
-    };
-    if (payload) {
-      requestOptions.body = JSON.stringify(payload)
-    }
+    console.error(payload)
     const url = `${BASE_URL}${urlPath}`;
     return await fetch(url, {
       method: method,
       headers: headerOptions,
-      body: JSON.stringify(payload),
+      body: payload ? JSON.stringify(payload) : null,
     })
       .then((response) => response.json())
       .then((data) => {
@@ -35,7 +28,7 @@ const API = {
           message: error
         }
       });
-    }
   }
+}
 
 export default API;

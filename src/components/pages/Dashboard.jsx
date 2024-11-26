@@ -8,21 +8,24 @@ import {
 } from "@mui/material";
 import Images from "./Images";
 import HeaderMenu from "./HeaderMenu";
+import { useEffect, useState } from "react";
+import API from "../../api/backend";
 
 const Dashboard = () => {
-  const albums = [
-    "Christmas Party 2023",
-    "Summer Outing 2024",
-    "Outreach 2024",
-    "At the Room 202",
-    "Dinner at 7/11",
-  ];
-  const tags = [
-    "Investiture",
-    "Outreach program",
-    "Etesep defense",
-    "Graduation 2022",
-  ];
+  const [tags, setTags] = useState([]);
+  const [albums, setAlbums] = useState([]);
+
+  useEffect(() => {
+    fetchFolders();
+  }, []);
+
+  const fetchFolders = async () => {
+    const responseTags = await API.call('folders/tags', "GET", null);
+    setTags(responseTags.res);
+    const responseAlbums = await API.call('folders/albums', "GET", null);
+    setAlbums(responseAlbums.res)
+  }
+
   const faces = ["Leogin", "Majo", "Mykel", "John", "Patrick", "Alfred"];
 
   const splitToColumn = (arr, chunkSize) => {
@@ -62,7 +65,7 @@ const Dashboard = () => {
             </Button>
             {albums.map((album, index) => (
               <Typography key={index} variant="body2" className="p-1">
-                {album}
+                {album.name}
               </Typography>
             ))}
           </CardContent>
@@ -72,7 +75,6 @@ const Dashboard = () => {
           <CardContent>
             <Button
               fullWidth
-              type="submit"
               variant="contained"
               sx={{
                 backgroundColor: "#872434",
@@ -86,7 +88,7 @@ const Dashboard = () => {
             </Button>
             {tags.map((tag, index) => (
               <Typography key={index} variant="body2" className="p-1">
-                {tag}
+                {tag.name}
               </Typography>
             ))}
           </CardContent>
@@ -96,7 +98,6 @@ const Dashboard = () => {
           <CardContent>
             <Button
               fullWidth
-              type="submit"
               variant="contained"
               sx={{
                 backgroundColor: "#872434",
@@ -125,7 +126,6 @@ const Dashboard = () => {
           <CardContent>
             <Button
               fullWidth
-              type="submit"
               variant="contained"
               sx={{
                 backgroundColor: "#872434",
@@ -159,6 +159,6 @@ const Dashboard = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Dashboard;

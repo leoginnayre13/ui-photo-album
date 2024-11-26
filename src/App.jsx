@@ -9,6 +9,7 @@ import Albums from "./components/pages/Albums";
 import MyPhotos from "./components/pages/MyPhotos";
 import Tags from "./components/pages/Tags";
 import Upload from "./components/pages/Upload";
+import AlbumUpload from "./components/pages/AlbumUpload.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/faces" element={<FaceId />} />
         <Route path="/albums" element={<Albums />} />
         <Route path="/myphotos" element={<MyPhotos />} />
+        <Route path="/album-upload" element={<AlbumUpload />} />
         <Route path="/tags" element={<Tags />} />
         <Route path="/upload" element={<Upload />} />
       </Routes>

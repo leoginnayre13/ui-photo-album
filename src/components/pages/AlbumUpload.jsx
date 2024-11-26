@@ -14,12 +14,13 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useState, useEffect } from "react";
 import API from "../../api/backend";
 
-const Upload = () => {
+const AlbumUpload = () => {
   const [selectedImages, setSelectedImages] = useState([]);
-  const [tags, setTags] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
   const [openTag, setOpenTag] = useState(false);
   const [imageURLS, setImageURLs] = useState([]);
+  const [tags, setTags] = useState([]);
+  const [albumName, setAlbumName] = useState(null);
   const [newTag, setNewTag] = useState(null);
 
   useEffect(() => {
@@ -39,9 +40,8 @@ const Upload = () => {
 
   const fetchTags = async () => {
     const response = await API.call('folders/tags', "GET", null);
-    setTags(response.res)
+    setTags(response.res);
   }
-
 
   const createTag = async () => {
     const payload = {
@@ -51,12 +51,26 @@ const Upload = () => {
     const response = await API.call('folders', "POST", payload);
   }
 
-  const upload = async () => {
+  const createAlbum = async () => {
+    const payload = {
+      name: albumName,
+      type: 'ALB'
+    }
+    const response = await API.call('folders', "POST", payload);
+    console.error("LLLL", response)
+    if (response.success) {
+      let folderIds = selectedTags.map(tag => tag.id);
+      folderIds.push(response.res.id);
+      upload(folderIds)
+    }
+  }
+
+  const upload = async (folderIds) => {
     const formData = new FormData();
     selectedImages.forEach((file) => formData.append("files", file), {
       type: 'application/octet-stream'
     });
-    formData.append("request", new Blob([JSON.stringify({ 'tagIds': selectedTags.map(tag => tag.id) })], {
+    formData.append("request", new Blob([JSON.stringify({ 'tagIds': folderIds})], {
       type: 'application/json'
     }))
 
@@ -136,6 +150,17 @@ const Upload = () => {
       </div>
 
       <div className="w-[75%] m-auto flex flex-col items-center py-8">
+        <div className="!flex w-[100%] mb-2 justify-between">
+          <div className="!flex">
+            <div className="flex m-1 p-1">
+              <Typography className="!text-left" variant="h6">
+                Album Name:&nbsp;
+              </Typography>
+              <TextField label="Album Name" onChange={(txt) => setAlbumName(txt.target.value)}/>
+            </div>
+          </div>
+        </div>
+
         {/* Image Grid */}
         <div className="flex justify-between items-start w-[100%]">
           <div>
@@ -165,7 +190,7 @@ const Upload = () => {
             </div>
 
             {/* Tags */}
-            <div className="">
+            <div className="mt-4 flex space-x-2">
               {selectedTags.map((item, index) => (
                 <Button variant="outlined" className="!text-black !bg-gray-200">
                   {item.name}
@@ -204,7 +229,7 @@ const Upload = () => {
           <Button
             variant="outlined"
             className="!text-white !bg-blue-500 w-[150px] mr-4"
-            onClick={() => upload()}
+            onClick={() => createAlbum()}
           >
             UPLOAD
           </Button>
@@ -265,4 +290,4 @@ const Upload = () => {
   )
 }
 
-export default Upload;
+export default AlbumUpload;
